@@ -7,6 +7,7 @@
 
 Folder Synchronization Tool
 ---------------------------
+File: folder_sync.py
 Created: 12-02-2025
 Author: Hosu Kim
 Description: One-way folder synchronization utility that maintains an exact replica of
