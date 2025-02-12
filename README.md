@@ -1,5 +1,10 @@
 # Coolest Folder Synchronizer
 This tool automatically keeps an exact copy of a source folder in a different location, continuously checking for changes and recording all actions in detailed logs. Think of it as an automated backup system that ensures your replica folder always matches the original.
+## Installation
+Clone the repository
+```base
+git clone https://github.com/hosu-kim/coolest_folder_synchronizer.git
+```
 ## Usage
 Run the program using the following command:
 ```bash
