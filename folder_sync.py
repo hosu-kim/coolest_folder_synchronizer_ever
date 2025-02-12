@@ -1,11 +1,32 @@
+"""
+ __     __                             __  __  _   _                    
+ \ \   / /___   ___   __ _  _ __ ___   \ \/ / | | | |  ___   ___  _   _ 
+  \ \ / // _ \ / _ \ / _` || '_ ` _ \   \  /  | |_| | / _ \ / __|| | | |
+   \ V /|  __/|  __/| (_| || | | | | |  /  \  |  _  || (_) |\__ \| |_| |
+    \_/  \___| \___| \__,_||_| |_| |_| /_/\_\ |_| |_| \___/ |___/ \__,_|
+
+Folder Synchronization Tool
+---------------------------
+Created: 12-02-2025
+Author: Hosu Kim
+Description: One-way folder synchronization utility that maintains an exact replica of
+             a source folder. Performs periodic synchronization with loggig.
+Usage:
+    python folder_sync.py <source_path> <replica_path> <log_path> <interval>
+
+Example:
+    python folder_sync.py /source /replica /var/log/sync.log 60 
+			 
+Copyright (c) 2025 hosu-kim. All rights reserved.
+"""
 import os
 import sys
 import shutil
 import hashlib
 import logging
 from pathlib import Path
-from datetime import datetime
-from typing import Optinal
+import time
+from typing import Optional
 
 class FolderSynchronizer:
 	def	__init__(self, source_path: str, replica_path: str, log_path: str, interval: int):
@@ -41,9 +62,9 @@ class FolderSynchronizer:
 				if path.is_file():
 					relative_path = path.relative_to(self.source_path)
 					source_files.add(relative_path)
-					self.sync.file(relative_path)
+					self.sync_file(relative_path)
 			
-			for path in self.replice_path.rglob("*"):
+			for path in self.replica_path.rglob("*"):
 				if path.is_file():
 					relative_path = path.relative_to(self.replica_path)
 					if relative_path not in source_files:
@@ -68,7 +89,7 @@ class FolderSynchronizer:
 		while True:
 			self.sync_folders()
 			logging.info(f"Synchronization completed. Waiting {self.interval} seconds...")
-			datetime.sleep(self.interval)
+			time.sleep(self.interval)
 
 def main():
 	if len(sys.argv) != 5:
@@ -77,7 +98,7 @@ def main():
 
 	source_path = sys.argv[1]
 	replica_path = sys.argv[2]
-	log_path = sys.argv[2]
+	log_path = sys.argv[3]
 	interval = int(sys.argv[4])
 
 	synchronizer = FolderSynchronizer(source_path, replica_path, log_path, interval)
