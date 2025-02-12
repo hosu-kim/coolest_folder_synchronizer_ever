@@ -16,7 +16,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 @dataclass
-class Syncconfig:
+class SyncConfig:
     source_path: Path
     replica_path: Path
     log_path: Path
