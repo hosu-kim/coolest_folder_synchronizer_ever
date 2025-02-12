@@ -31,7 +31,9 @@ python folder_sync.py /path/to/source /path/to/replica /var/log/sync.log 60
 └── test_folder_sync.py    # Test cases
 ```
 ## Testing
-the project includes a comprehensive test suite. To run the tests:
+The project includes a comprehensive test suite. 
+
+To run the tests:
 ```bash
 pytest test_folder_sync.py
 ```
@@ -41,7 +43,7 @@ pytest test_folder_sync.py
 - Error handling and retry mechanism
 - Edge cases and invalid inputs
 ## Logging
-the tool provides detailed logging of all operations:
+The tool provides detailed logging of all operations:
 - File copies
 - File deletions
 - Hash verification results
@@ -54,7 +56,7 @@ Example log output:
 2025-02-12 18:28:27 UTC - INFO - Synchronization completed. Waiting 60 seconds...
 ```
 ## Error Handling
-the tool implements several error handling mechanisms:
+The tool implements several error handling mechanisms:
 - Validates all input parameters
 - Verifies file system permissions
 - Implements retry logic for failed operations
@@ -72,7 +74,7 @@ the tool implements several error handling mechanisms:
 - No real-time event monitoring (uses polling)
 - Limited to file systems accessible through Python's standard library
 ## Contributing
-contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 ## Author
