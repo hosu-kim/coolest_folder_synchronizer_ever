@@ -1,17 +1,53 @@
+"""
+__     __                             __  __  _   _                    
+ \ \   / /___   ___   __ _  _ __ ___   \ \/ / | | | |  ___   ___  _   _ 
+  \ \ / // _ \ / _ \ / _` || '_ ` _ \   \  /  | |_| | / _ \ / __|| | | |
+   \ V /|  __/|  __/| (_| || | | | | |  /  \  |  _  || (_) |\__ \| |_| |
+    \_/  \___| \___| \__,_||_| |_| |_| /_/\_\ |_| |_| \___/ |___/ \__,_|
+
+Folder Synchronization Tool
+---------------------------
+File: test_folder_sync.py
+Created: 12-02-2025
+Author: Hosu Kim
+Description: Test cases for folder synchronization
+"""
 import pytest
+import tempfile
 from pathlib import Path
 from folder_sync import FolderSynchronizer
+from config import Syncconfig
 
-def test_file_hash_calculation(temp_path):
-    """Create test file"""
-    test_file = temp_path / "test.txt"
-    test_file.write_text("test centent")
+class TestFolderSynchronizer:
+    @pytest.fixture
+    def temp_dirs(self):
+        with tempfile.TemporaryDirectory() as source_dir, \
+             tempfile.TemporaryDirectory() as replica_dir \
+             tempfile.NamedTemporaryFile(suffix='.log') as log_file:
+            yield source_dir, replica_dir, log_file.name
 
-    sync = FolderSynchronizer(str(temp_path), str(temp_path / "replica"), "test.log", 60)
-    hash1 = sync.calculate_file_hash(test_file)
-    hash2 = sync.calculate_file_hash(test_file)
+    def test_basic_sync(self, temp_dirs):
+        source_dir, replica_dir, log_path = temp_dirs
 
-    assert hash1 == hash2
+        """Create test file"""
+        source_file = Path(source_dir) / "test.txt"
+        source_file.write_text("test content")
+
+        config = Syncconfig(
+            source_path=Path(source_dir),
+            replica_path=Path(replica_dir),
+            log_path=Path(log_path),
+            interval=60
+        )
+
+        sync = FolderSynchronizer(config)
+        sync.sync_folders()
+
+        """Verify synchronization"""
+        replica_file = Path(replica_dir) / "test.txt"
+        assert replica_file.exists()
+        assert replica_file.read_text() == "text content"
+
 
     
 
