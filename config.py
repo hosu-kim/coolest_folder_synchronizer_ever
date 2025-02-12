@@ -5,7 +5,7 @@
    \ V /|  __/|  __/| (_| || | | | | |  /  \  |  _  || (_) |\__ \| |_| |
     \_/  \___| \___| \__,_||_| |_| |_| /_/\_\ |_| |_| \___/ |___/ \__,_|
 
-Folder Synchronization Tool
+Coolest Folder Synchronizer
 ---------------------------
 File: config.py
 Created: 12-02-2025
