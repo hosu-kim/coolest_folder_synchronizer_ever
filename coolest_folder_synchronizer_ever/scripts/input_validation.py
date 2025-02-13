@@ -12,7 +12,7 @@ Input validation utilities for the Coolest Folder Synchronizer.
 
 This module provides validation functions for paths and synchronization intervals.
 
-Created: 2025-02-13 21:11:12 UTC+1
+Created: 2025-02-13 20:11:12 UTC
 Author: Hosu Kim
 """
 import os

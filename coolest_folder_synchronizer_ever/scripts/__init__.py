@@ -15,7 +15,7 @@ This package provides the main components for folder synchronization:
     * SyncConfig: Configuration management
     * ResourceManager: Resource handling and cleanup
 
-Created: 2025-02-13 21:44:03 UTC+1
+Created: 2025-02-13 20:44:03 UTC
 Author: Hosu Kim
 """
 

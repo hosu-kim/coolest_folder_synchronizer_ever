@@ -23,7 +23,7 @@ Example:
     >>> with FolderSynchroizer(config) as sync:
     ...     sync.run()
 
-Created: 2025-02-13 21:19:54 UTC+1
+Created: 2025-02-13 20:19:54 UTC
 Author: Hosu Kim
 """
 

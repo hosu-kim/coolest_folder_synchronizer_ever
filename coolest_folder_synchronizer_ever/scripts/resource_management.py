@@ -13,7 +13,7 @@ Resource management utilities for the Coolest Folder Synchronizer.
 This module provides context management and cleanup functionality for
 synchronization resources.
 
-Created: 2025-02-13 21:31:14 UTC+1
+Created: 2025-02-13 20:31:14 UTC
 Author: Hosu Kim
 """
 import logging

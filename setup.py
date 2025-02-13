@@ -6,29 +6,38 @@ r"""
     \_/  \___| \___| \__,_||_| |_| |_| /_/\_\ |_| |_| \___/ |___/ \__,_|
 
 Coolest Folder Synchronizer
----------------------------
-File: setup.py
-Created: 13-02-2025
+==========================
+
+Setup configuration for the Coolest Folder Synchronizer.
+
+This module contains the package configuration and dependencies for the
+Coolest Folder Synchronizer project. It provides:
+    * Package metadata
+    * Dependencies
+    * Python version requirements
+    * Project classifiers
+
+Created: 2025-02-13 21::28 UTC
 Author: Hosu Kim
 """
 
 from setuptools import setup, find_packages
 
 setup(
-	name="cooliest_folder_synchronizer",
+	name="coolest_folder_synchronizer",
 	version="0.1",
 	author="Hosu Kim",
 	author_email="hosu@outlook.cz",
-	description="folder Synchronizer",
+	description="A tool for synchronizing folders with logging and validation",
 	packages=find_packages(),
-	install_requites=[
+	install_requires=[
 		"pytest",
 	],
-	python_requites=">=3.10",
+	python_requires=">=3.10",
 	classifiers=[
-		"Development status :: 3 - Alpha",
+		"Development Status :: 3 - Alpha",
 		"Intended Audience :: Developers",
-		"License :: OSI approved :: MIT Licnese",
+		"License :: OSI Approved :: MIT License",
 		"Programming Language :: Python :: 3.10",
 	],
 )

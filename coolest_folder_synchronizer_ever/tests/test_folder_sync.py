@@ -14,7 +14,7 @@ This modlue contains tests that verify the core functionality of the folder
 synchronization system, including basic operations, nested directory handling,
 and file deletion synchronization.
 
-Created: 2025-02-13 21:49:29 UTC+1
+Created: 2025-02-13 20:49:29 UTC
 Author: Hosu Kim
 """
 import pytest

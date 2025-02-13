@@ -13,7 +13,7 @@ Configuration management for folder synchronization.
 This module provides configuration settings for the folder synchronization
 utility through a dataclass-based configuration.
 
-Created: 2025-02-13 21:36:18 UTC+1
+Created: 2025-02-13 20:36:18 UTC
 Author: Hosu Kim
 """
 from dataclasses import dataclass
