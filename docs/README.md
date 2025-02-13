@@ -2,13 +2,13 @@
 This tool automatically keeps an exact copy of a source folder in a different location, continuously checking for changes and recording all actions in detailed logs. Think of it as an automated backup system that ensures your replica folder always matches the original.
 ## Installation
 Clone the repository
-```base
+```zsh
 git clone https://github.com/hosu-kim/coolest_folder_synchronizer.git
 ```
 ## Usage
 Run the program using the following command:
-```bash
-python folder_sync.py <source_path> <replica_path> <log_path> <interval>
+```zsh
+python3 folder_sync.py <source_path> <replica_path> <log_path> <interval>
 ```
 ### Parameters
 - `source_path`: Path to the source folder to be synchronized
@@ -16,8 +16,8 @@ python folder_sync.py <source_path> <replica_path> <log_path> <interval>
 - `log_path`: Path where the log file will be created
 - `interval`: Synchronization interval in seconds
 ### Example
-```bash
-python scripts/folder_sync.py /path/to/source /path/to/replica /var/log/sync.log 60
+```zsh
+python3 scripts/folder_sync.py /path/to/source /path/to/replica /var/log/sync.log 60
 ```
 ## Project Structure
 ```code
@@ -34,7 +34,7 @@ python scripts/folder_sync.py /path/to/source /path/to/replica /var/log/sync.log
 The project includes a comprehensive test suite. 
 
 To run the tests:
-```bash
+```zsh
 pytest tests/test_folder_sync.py
 ```
 ### Test Coverage

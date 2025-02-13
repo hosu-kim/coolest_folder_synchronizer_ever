@@ -29,9 +29,9 @@ import time
 from pathlib import Path
 from typing import Set
 
-from config import SyncConfig
-from input_validation import validate_paths, validate_interval
-from resource_management import ResourceManager
+from .config import SyncConfig
+from .input_validation import validate_paths, validate_interval
+from .resource_management import ResourceManager
 
 class FolderSynchronizer(ResourceManager):
     def __init__(self, config: SyncConfig):

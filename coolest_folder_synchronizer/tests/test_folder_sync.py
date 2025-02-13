@@ -14,10 +14,13 @@ Description: Test cases for folder synchronization
 """
 import pytest
 import tempfile
+import os
+import sys
 from pathlib import Path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from scripts.folder_sync import FolderSynchronizer
-from scripts.config import SyncConfig
+from scripts import FolderSynchronizer
+from scripts import SyncConfig
 
 class TestFolderSynchronizer:
     @pytest.fixture
