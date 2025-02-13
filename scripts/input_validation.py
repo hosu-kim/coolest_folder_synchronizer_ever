@@ -16,7 +16,7 @@ import os
 from pathlib import Path
 
 def validate_paths(source_path: Path, replica_path: Path, log_path: Path) -> None:
-    if not not source_path.exists():
+    if not source_path.exists():
         raise ValueError(f"Source path does not exist: {source_path}")
 
     if source_path == replica_path:
@@ -30,8 +30,5 @@ def validate_paths(source_path: Path, replica_path: Path, log_path: Path) -> Non
         raise ValueError(f"Log directory does not exist: {log_dir}")
 
 def validate_interval(interval: int) -> None:
+    if interval <= 0:
         raise ValueError(f"Invalied interval: {interval}. Must be positive.")
-
-
-    
-
