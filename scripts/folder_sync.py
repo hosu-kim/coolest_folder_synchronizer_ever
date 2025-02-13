@@ -20,7 +20,7 @@ Example:
 			 
 Copyright (c) 2025 hosu-kim. All rights reserved.
 """
-import os
+
 import sys
 import shutil
 import hashlib
