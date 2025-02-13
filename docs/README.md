@@ -17,7 +17,7 @@ python folder_sync.py <source_path> <replica_path> <log_path> <interval>
 - `interval`: Synchronization interval in seconds
 ### Example
 ```bash
-python folder_sync.py /path/to/source /path/to/replica /var/log/sync.log 60
+python scripts/folder_sync.py /path/to/source /path/to/replica /var/log/sync.log 60
 ```
 ## Project Structure
 ```code
@@ -35,7 +35,7 @@ The project includes a comprehensive test suite.
 
 To run the tests:
 ```bash
-pytest test_folder_sync.py
+pytest tests/test_folder_sync.py
 ```
 ### Test Coverage
 - Basic synchronization functionality

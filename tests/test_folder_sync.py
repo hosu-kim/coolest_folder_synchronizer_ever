@@ -1,4 +1,4 @@
-"""
+r"""
 __     __                             __  __  _   _                    
  \ \   / /___   ___   __ _  _ __ ___   \ \/ / | | | |  ___   ___  _   _ 
   \ \ / // _ \ / _ \ / _` || '_ ` _ \   \  /  | |_| | / _ \ / __|| | | |
@@ -15,16 +15,17 @@ Description: Test cases for folder synchronization
 import pytest
 import tempfile
 from pathlib import Path
-from folder_sync import FolderSynchronizer
-from config import Syncconfig
+
+from scripts.folder_sync import FolderSynchronizer
+from scripts.config import SyncConfig
 
 class TestFolderSynchronizer:
     @pytest.fixture
     def temp_dirs(self):
         with tempfile.TemporaryDirectory() as source_dir, \
-             tempfile.TemporaryDirectory() as replica_dir \
+             tempfile.TemporaryDirectory() as replica_dir, \
              tempfile.NamedTemporaryFile(suffix='.log') as log_file:
-            yield source_dir, replica_dir, log_file.name
+                yield source_dir, replica_dir, log_file.name
 
     def test_basic_sync(self, temp_dirs):
         source_dir, replica_dir, log_path = temp_dirs
@@ -33,7 +34,7 @@ class TestFolderSynchronizer:
         source_file = Path(source_dir) / "test.txt"
         source_file.write_text("test content")
 
-        config = Syncconfig(
+        config = SyncConfig(
             source_path=Path(source_dir),
             replica_path=Path(replica_dir),
             log_path=Path(log_path),
@@ -46,8 +47,4 @@ class TestFolderSynchronizer:
         """Verify synchronization"""
         replica_file = Path(replica_dir) / "test.txt"
         assert replica_file.exists()
-        assert replica_file.read_text() == "text content"
-
-
-    
-
+        assert replica_file.read_text() == "test content"

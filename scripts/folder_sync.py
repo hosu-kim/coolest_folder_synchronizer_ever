@@ -1,4 +1,4 @@
-"""
+r"""
  __     __                             __  __  _   _                    
  \ \   / /___   ___   __ _  _ __ ___   \ \/ / | | | |  ___   ___  _   _ 
   \ \ / // _ \ / _ \ / _` || '_ ` _ \   \  /  | |_| | / _ \ / __|| | | |
@@ -11,7 +11,7 @@ File: folder_sync.py
 Created: 12-02-2025
 Author: Hosu Kim
 Description: One-way folder synchronization utility that maintains an exact replica of
-             a source folder. Performs periodic synchronization with loggig.
+             a source folder. Performs periodic synchronization with logging.
 Usage:
     python folder_sync.py <source_path> <replica_path> <log_path> <interval>
 
@@ -34,7 +34,8 @@ from input_validation import validate_paths, validate_interval
 from resource_management import ResourceManager
 
 class FolderSynchronizer(ResourceManager):
-    def __init__(self, configL SyncConfig):
+    def __init__(self, config: SyncConfig):
+        super().__init__()
         self.config = config
         self.source_path = config.source_path
         self.replica_path = config.replica_path
@@ -73,7 +74,7 @@ class FolderSynchronizer(ResourceManager):
 
     def sync_file(self, relative_path: Path, retry_count: int = 0) -> None:
         source_file = self.source_path / relative_path
-        replica_file = self.replica_path /relative_path
+        replica_file = self.replica_path / relative_path
         
         try:
             replica_file.parent.mkdir(parents=True, exist_ok=True)
@@ -104,7 +105,7 @@ class FolderSynchronizer(ResourceManager):
                     relative_path = path.relative_to(self.replica_path)
                     if relative_path not in source_files:
                         path.unlink()
-                        logging.infor(f"Deleted: {path}")
+                        logging.info(f"Deleted: {path}")
         
         except Exception as e:
             logging.error(f"Synchronization error: {str(e)}")
@@ -136,7 +137,7 @@ def main():
             replica_path=Path(sys.argv[2]),
             log_path=Path(sys.argv[3]),
             interval=int(sys.argv[4])
-		)
+        )
         
         with FolderSynchronizer(config) as synchronizer:
             synchronizer.run()
@@ -149,7 +150,4 @@ def main():
         sys.exit(1)
 
 if __name__ == "__main__":
-	main()
-
-                
-               
+    main()
