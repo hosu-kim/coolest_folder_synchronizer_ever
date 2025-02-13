@@ -6,15 +6,12 @@ r"""
     \_/  \___| \___| \__,_||_| |_| |_| /_/\_\ |_| |_| \___/ |___/ \__,_|
 
 Coolest Folder Synchronizer
----------------------------
-File: __init__.py
-Created: 13-02-2025
-Author: Hosu Kim
-"""
-"""
-Coolest Folder Synchronizer
---------------------------
+==========================
+
 A tool for synchronizing folders with logging and validation.
+
+Created: 2025-02-13 21:45:28 UTC+1
+Author: Hosu Kim
 """
 
 __version__ = "0.1.0"
