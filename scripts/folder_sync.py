@@ -35,7 +35,6 @@ from resource_management import ResourceManager
 
 class FolderSynchronizer(ResourceManager):
     def __init__(self, config: SyncConfig):
-        super().__init__()
         self.config = config
         self.source_path = config.source_path
         self.replica_path = config.replica_path
@@ -66,14 +65,14 @@ class FolderSynchronizer(ResourceManager):
         except IOError as e:
             logging.error(f"Error calculating hash for {file_path}: {e}")
             raise
-    
+
     def get_source_files(self) -> Set[Path]:
         return {path.relative_to(self.source_path)
                 for path in self.source_path.rglob("*")
                 if path.is_file()}
 
-    def sync_file(self, relative_path: Path, retry_count: int = 0) -> None:
-        source_file = self.source_path / relative_path
+    def sync_file(self, relative_path: Path, retry_count: int=0) -> None:
+        source_file = self.source_path / relative_path # /: Path joining operator with pathlib.Path
         replica_file = self.replica_path / relative_path
         
         try:
@@ -91,7 +90,7 @@ class FolderSynchronizer(ResourceManager):
             else:
                 logging.error(f"Failed to sync {source_file} after {self.config.max_retries} retries: {e}")
                 raise
-    
+
     def sync_folders(self) -> None:
         try:
             self.replica_path.mkdir(parents=True, exist_ok=True)
@@ -110,11 +109,11 @@ class FolderSynchronizer(ResourceManager):
         except Exception as e:
             logging.error(f"Synchronization error: {str(e)}")
             raise
-    
+
     def run(self) -> None:
         logging.info("Starting folder synchronization.")
         self.running = True
-    
+
         try:
             while self.running:
                 self.sync_folders()
@@ -125,12 +124,12 @@ class FolderSynchronizer(ResourceManager):
         except Exception as e:
             logging.error(f"Fatal error: {e}")
             raise
-        
+
 def main():
     if len(sys.argv) != 5:
         print("Usage: python folder_sync.py <source_path> <replica_path> <log_path> <interval>")
         sys.exit(1)
-    
+
     try:
         config = SyncConfig(
             source_path=Path(sys.argv[1]),
@@ -141,7 +140,7 @@ def main():
         
         with FolderSynchronizer(config) as synchronizer:
             synchronizer.run()
-        
+
     except ValueError as e:
         print(f"Configuration error: {e}")
         sys.exit(1)
