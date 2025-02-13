@@ -80,4 +80,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Author
 hosu-kim
 ## Support
-For support, please create an issue in the GitHub repository or contact the author directly.
+For support, please create an issue in the GitHub repository or contact me directly.
