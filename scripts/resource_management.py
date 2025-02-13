@@ -20,7 +20,7 @@ class ResourceManager:
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb) -> None:
-        logging.info("Snychroniation stopped.")
+        logging.info("Synchronization stopped.")
 
     def cleanup(self) -> None:
         pass
