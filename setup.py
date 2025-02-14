@@ -24,7 +24,7 @@ Author: Hosu Kim
 from setuptools import setup, find_packages
 
 setup(
-	name="coolest_folder_synchronizer",
+	name="coolest_folder_synchronizer_ever",
 	version="0.1",
 	author="Hosu Kim",
 	author_email="hosu@outlook.cz",
