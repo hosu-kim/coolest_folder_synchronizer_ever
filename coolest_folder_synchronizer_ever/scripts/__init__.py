@@ -21,7 +21,7 @@ Author: Hosu Kim
 
 from .folder_sync import FolderSynchronizer
 from .config import SyncConfig
-from .resource_management import ResourceManager  # manage_resources 대신 ResourceManager
+from .resource_management import ResourceManager
 
 __all__ = [
     'FolderSynchronizer',
