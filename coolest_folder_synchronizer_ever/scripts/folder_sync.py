@@ -125,7 +125,7 @@ class FolderSynchronizer(ResourceManager):
         Raises:
             Exception: If synchronization fails after max retries
         """
-        source_file = self.source_path / relative_path # /: Path joining operator with pathlib.Path
+        source_file = self.source_path / relative_path # '/': Path joining operator with pathlib.Path
         replica_file = self.replica_path / relative_path
         
         try:
@@ -208,8 +208,8 @@ def main():
             interval=int(sys.argv[4])
         )
         
-        with FolderSynchronizer(config) as synchronizer:
-            synchronizer.run()
+        with FolderSynchronizer(config) as sync:
+            sync.run()
 
     except ValueError as e:
         print(f"Configuration error: {e}")
