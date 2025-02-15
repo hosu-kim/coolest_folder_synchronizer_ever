@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+coolest_folder_synchronizer_ever/__init__.py
+coolest_folder_synchronizer_ever/config.py
+coolest_folder_synchronizer_ever/folder_sync.py
+coolest_folder_synchronizer_ever/input_validation.py
+coolest_folder_synchronizer_ever/resource_management.py
+coolest_folder_synchronizer_ever.egg-info/PKG-INFO
+coolest_folder_synchronizer_ever.egg-info/SOURCES.txt
+coolest_folder_synchronizer_ever.egg-info/dependency_links.txt
+coolest_folder_synchronizer_ever.egg-info/entry_points.txt
+coolest_folder_synchronizer_ever.egg-info/requires.txt
+coolest_folder_synchronizer_ever.egg-info/top_level.txt
+coolest_folder_synchronizer_ever/scripts/__init__.py
+tests/__init__.py
+tests/test_folder_sync.py

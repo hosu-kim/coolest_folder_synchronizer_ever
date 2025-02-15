@@ -43,7 +43,7 @@ setup(
 
 	entry_points={
 		'console_scripts': [
-			'folder-sync=coolest_folder_synchronizer_ever.'
+			'folder-sync=coolest_folder_synchronizer_ever.folder_sync:main'
 		]
 	}
 )
