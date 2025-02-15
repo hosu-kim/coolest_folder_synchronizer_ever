@@ -32,6 +32,8 @@ python3 folder-sync /path/to/source /path/to/replica /var/log/sync.log 60
 .
 ├── LICENSE
 ├── README.md
+├── images
+│   └── logo.png
 ├── coolest_folder_synchronizer_ever
 │   ├── __init__.py
 │   ├── config.py
