@@ -1,14 +1,18 @@
 # Coolest Folder Synchronizer ever!
 This tool automatically keeps an exact copy of a source folder in a different location, continuously checking for changes and recording all actions in detailed logs. Think of it as an automated backup system that ensures your replica folder always matches the original.
 ## Installation
-Clone the repository
+Clone the repository:
 ```zsh
 git clone https://github.com/hosu-kim/coolest_folder_synchronizer.git
+```
+Package install:
+```zsh
+pip install .
 ```
 ## Usage
 Run the program using the following command:
 ```zsh
-python3 scripts/folder_sync.py <source_path> <replica_path> <log_path> <interval>
+python3 folder-sync <source_path> <replica_path> <log_path> <interval>
 ```
 ### Parameters
 - `source_path`: Path to the source folder to be synchronized
@@ -17,26 +21,25 @@ python3 scripts/folder_sync.py <source_path> <replica_path> <log_path> <interval
 - `interval`: Synchronization interval in seconds
 ### Example
 ```zsh
-python3 scripts/folder_sync.py /path/to/source /path/to/replica /var/log/sync.log 60
+python3 folder-sync /path/to/source /path/to/replica /var/log/sync.log 60
 ```
 ## Project Structure
 ```code
 .
-├── LICENSE                              # MIT License
-├── setup.py                             # Package setup and installation
-├── docs/
-│   └── README.md                        # Documentation
-├── coolest_folder_synchronizer_ever/    # Main package directory
-│   ├── __init__.py                      # Package initialization
-│   ├── scripts/                         # Core functionality
-│   │   ├── __init__.py
-│   │   ├── config.py                    # Configuration management
-│   │   ├── folder_sync.py               # Main synchronization logic
-│   │   ├── input_validation.py          # Input validation utilities
-│   │   └── resource_management.py       # Resource management utilities
-│   └── tests/                           # Test directory
-│       ├── __init__.py
-│       └── test_folder_sync.py          # Test cases
+├── LICENSE
+├── README.md
+├── coolest_folder_synchronizer_ever
+│   ├── __init__.py
+│   ├── config.py
+│   ├── folder_sync.py
+│   ├── input_validation.py
+│   ├── resource_management.py
+│   └── scripts
+│       └── __init__.py
+├── setup.py
+└── tests
+    ├── __init__.py
+    └── test_folder_sync.py
 ```
 ## Testing
 The project includes a comprehensive test suite. 
