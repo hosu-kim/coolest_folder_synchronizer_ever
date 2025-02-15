@@ -5,26 +5,20 @@ r"""
    \ V /|  __/|  __/| (_| || | | | | |  /  \  |  _  || (_) |\__ \| |_| |
     \_/  \___| \___| \__,_||_| |_| |_| /_/\_\ |_| |_| \___/ |___/ \__,_|
 
-Coolest Folder Synchronizer
+Coolest Folder Synchronizer Ever
 ==========================
 
-Core functionality modules for the Coolest Folder Synchronizer.
+This package contains utility scripts and tools for the
+Coolest Folder Synchronizer Ever project.
 
-This package provides the main components for folder synchronization:
-    * FolderSynchronizer: Main synchronization implementation
-    * SyncConfig: Configuration management
-    * ResourceManager: Resource handling and cleanup
+This directory is reserved for addtional scrips, tools,
+or utilities that support the main package functionality
+but are not part of the core implementaion.
 
-Created: 2025-02-13 20:44:03 UTC
+Creadted: 2025-02-15 16:19:49 UTC
 Author: Hosu Kim
 """
 
-from .folder_sync import FolderSynchronizer
-from .config import SyncConfig
-from .resource_management import ResourceManager
+__version__ = "0.1"
 
-__all__ = [
-    'FolderSynchronizer',
-    'SyncConfig',
-    'ResourceManager'
-]
+__all__ = []

@@ -40,4 +40,10 @@ setup(
 		"License :: OSI Approved :: MIT License",
 		"Programming Language :: Python :: 3.10",
 	],
+
+	entry_points={
+		'console_scripts': [
+			'folder-sync=coolest_folder_synchronizer_ever.'
+		]
+	}
 )

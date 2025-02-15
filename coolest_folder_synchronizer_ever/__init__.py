@@ -5,24 +5,15 @@ r"""
    \ V /|  __/|  __/| (_| || | | | | |  /  \  |  _  || (_) |\__ \| |_| |
     \_/  \___| \___| \__,_||_| |_| |_| /_/\_\ |_| |_| \___/ |___/ \__,_|
 
-Coolest Folder Synchronizer
+Coolest Folder Synchronizer Ever
 ==========================
 
-A tool for synchronizing folders with logging and validation.
+One-way folder synchronization utility with logging capabilities.
 
-Created: 2025-02-13 20:45:28 UTC
-Author: Hosu Kim
+Author: hosu-kim
+Created: 2025-02-15 16:15:46 UTC
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1"
 __author__ = "Hosu Kim"
-
-from .scripts.folder_sync import FolderSynchronizer
-from .scripts.config import SyncConfig
-from .scripts.resource_management import ResourceManager
-
-__all__ = [
-    'FolderSynchronizer',
-    'SyncConfig',
-    'ResourceManager'
-]
+__email__ = "hosu@outlook.cz"
