@@ -24,8 +24,8 @@ import sys
 from pathlib import Path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from scripts import FolderSynchronizer
-from scripts import SyncConfig
+from src.folder_sync import FolderSynchronizer
+from src.config import SyncConfig
 
 class TestFolderSynchronizer:
     """Test suite for FolderSynchronizer class.
