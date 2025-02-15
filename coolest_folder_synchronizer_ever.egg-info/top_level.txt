@@ -1,2 +1,0 @@
-coolest_folder_synchronizer_ever
-tests
