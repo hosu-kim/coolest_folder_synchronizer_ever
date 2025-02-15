@@ -5,7 +5,7 @@ Clone the repository:
 ```zsh
 git clone https://github.com/hosu-kim/coolest_folder_synchronizer.git
 ```
-Package install:
+Install the package:
 ```zsh
 pip install .
 ```
