@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/logo.png" width="400">
+  <img src="images/logo.png" width="300">
 </p>
 
 # Coolest Folder Synchronizer ever!
