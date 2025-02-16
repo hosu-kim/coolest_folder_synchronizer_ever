@@ -70,7 +70,7 @@ class FolderSynchronizer(ResourceManager):
 
     def setup_logging(self, log_path:Path) -> None:
         """Configures logging for synchronization operations.
-        
+
         Args:
             log_path: Path where log files will be written
         """
@@ -127,7 +127,7 @@ class FolderSynchronizer(ResourceManager):
         """
         source_file = self.source_path / relative_path # '/': Path joining operator with pathlib.Path
         replica_file = self.replica_path / relative_path
-        
+
         try:
             replica_file.parent.mkdir(parents=True, exist_ok=True)
             
@@ -146,7 +146,7 @@ class FolderSynchronizer(ResourceManager):
 
     def sync_folders(self) -> None:
         """Performs one complete synchronization of folders.
-        
+
         Raises:
             Exception: If synchronization encounters an error
         """
@@ -170,7 +170,7 @@ class FolderSynchronizer(ResourceManager):
 
     def run(self) -> None:
         """Starts continuous folder synchronization.
-        
+
         Synchronizes folders periodically until interrupted.
         """
         logging.info("Starting folder synchronization.")
@@ -207,7 +207,7 @@ def main():
             log_path=Path(sys.argv[3]),
             interval=int(sys.argv[4])
         )
-        
+
         with FolderSynchronizer(config) as sync:
             sync.run()
 

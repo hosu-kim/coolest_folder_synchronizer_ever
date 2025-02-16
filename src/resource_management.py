@@ -27,7 +27,7 @@ class ResourceManager:
     """
     def __enter__(self) -> Any:
         """Enters the context manager.
-        
+
         Returns:
             Any: The ResourceManager instance
         """
@@ -45,7 +45,7 @@ class ResourceManager:
 
     def cleanup(self) -> None:
         """Performs cleanup of synchronization resources.
-        
+
         Currently a placeholder for future cleanup operations.
         """
         pass

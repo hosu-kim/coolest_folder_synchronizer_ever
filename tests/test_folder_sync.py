@@ -128,7 +128,7 @@ class TestFolderSynchronizer:
 
         Verifies that file deletions in the source directory are correctly
         propagated to the replica directory.
-        
+
         Args:
             temp_dirs: Fixture providing temporary test directories
 
