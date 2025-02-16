@@ -118,6 +118,9 @@ class FolderSynchronizer(ResourceManager):
     def sync_file(self, relative_path: Path, retry_count: int=0) -> None:
         """Synchronizes a single file from source to replica.
 
+        Notes:
+            Used in sync_folders()
+
         Args:
             relative_path: Path of file relative to source directory
             retry_count: Number of pervious retry attempts
