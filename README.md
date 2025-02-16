@@ -7,7 +7,7 @@ This tool automatically keeps an exact copy of a source folder in a different lo
 ## Installation
 Clone the repository:
 ```zsh
-git clone https://github.com/hosu-kim/coolest_folder_synchronizer.git
+git clone https://github.com/hosu-kim/coolest_folder_synchronizer_ever.git
 ```
 Install the package:
 ```zsh
