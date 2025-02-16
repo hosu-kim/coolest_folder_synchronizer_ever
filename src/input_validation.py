@@ -5,7 +5,7 @@ r"""
    \ V /|  __/|  __/| (_| || | | | | |  /  \  |  _  || (_) |\__ \| |_| |
     \_/  \___| \___| \__,_||_| |_| |_| /_/\_\ |_| |_| \___/ |___/ \__,_|
 
-Coolest Folder Synchronizer
+Coolest Folder Synchronizer Ever
 ==========================
 
 Input validation utilities for the Coolest Folder Synchronizer.
