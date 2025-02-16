@@ -25,7 +25,7 @@ from setuptools import setup, find_packages
 
 setup(
 	name="coolest_folder_synchronizer_ever",
-	version="0.1",
+	version="1.0.1",
 	author="Hosu Kim",
 	author_email="hosu@outlook.cz",
 	description="A tool for synchronizing folders with logging and validation",

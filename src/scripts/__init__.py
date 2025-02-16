@@ -19,6 +19,6 @@ Creadted: 2025-02-15 16:19:49 UTC
 Author: Hosu Kim
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 __all__ = []

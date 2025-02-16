@@ -200,7 +200,7 @@ def main():
         int: Exit code (0 for success, 1 for error)
     """
     if len(sys.argv) != 5:
-        print("Usage: python folder_sync.py <source_path> <replica_path> <log_path> <interval>")
+        print("Usage: python3 folder-sync <source_path> <replica_path> <log_path> <interval>")
         sys.exit(1)
 
     try:

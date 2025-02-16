@@ -16,7 +16,7 @@ pip install .
 ## Usage
 Run the program using the following command:
 ```zsh
-python3 folder-sync <source_path> <replica_path> <log_path> <interval>
+folder-sync <source_path> <replica_path> <log_path> <interval>
 ```
 ### Parameters
 - `source_path`: Path to the source folder to be synchronized
@@ -25,7 +25,7 @@ python3 folder-sync <source_path> <replica_path> <log_path> <interval>
 - `interval`: Synchronization interval in seconds
 ### Example
 ```zsh
-python3 folder-sync /path/to/source /path/to/replica /var/log/sync.log 60
+folder-sync /path/to/source /path/to/replica /var/log/sync.log 60
 ```
 ## Project Structure
 ```code
