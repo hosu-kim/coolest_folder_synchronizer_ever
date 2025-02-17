@@ -1,8 +1,8 @@
+<h1 align="center">Coolest Folder Synchronizer Ever!</h1>
 <p align="center">
   <img src="images/logo.png" width="300">
 </p>
 
-# Coolest Folder Synchronizer ever!
 This tool automatically keeps an exact copy of a source folder in a different location, continuously checking for changes and recording all actions in detailed logs. Think of it as an automated backup system that ensures your replica folder always matches the original.
 ## Installation
 Clone the repository:
