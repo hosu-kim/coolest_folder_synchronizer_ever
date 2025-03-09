@@ -7,16 +7,6 @@ One-way folder synchronization utility.
 This module provides functionality to maintain an exact replica of a source folder
 through periodic synchronization with logging capabilities.
 
-Example:
-    >>> config = SyncConfig(
-    ...     source_path=Path("/source"),
-    ...     replica_path=Path("/replica"),
-    ...     log_path=Path("/var/log/sync.log"),
-    ...     interval=60
-    ... )
-    >>> with FolderSynchroizer(config) as sync:
-    ...     sync.run()
-
 Created: 2025-02-13 20:19:54 UTC
 Author: Hosu Kim
 """
